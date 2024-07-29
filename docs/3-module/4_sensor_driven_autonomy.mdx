@@ -15,13 +15,13 @@ We will be using Gazebo to simulate the robot (BlueROV2) in a virtual (pool) env
 
 :::note
 
-We will be using Gazebo Garden, the latest version of Gazebo.
+We will be using Gazebo Harmonic, the latest version of Gazebo.
 
 :::
 
 ## Installation
 
-The documentation for installing Gazebo can be found [here](https://gazebosim.org/docs/garden/install).
+The documentation for installing Gazebo can be found [here](https://gazebosim.org/docs/harmonic/install).
 See "**Binary Installation**" for instructions on installing Gazebo on your operating system.
 Below is a summary of the steps.
 
@@ -68,7 +68,7 @@ sed -i '' 's|cmake_args << "-DCMAKE_INSTALL_RPATH=#{rpath}"|cmake_args << "-DCMA
 Next we install Gazebo:
 
 ```bash
-brew install gz-garden
+brew install gz-harmonic
 ```
 
 </TabItem>
@@ -92,7 +92,7 @@ Finally, we install Gazebo:
 
 ```bash
 sudo apt-get update
-sudo apt-get install gz-garden
+sudo apt-get install gz-harmonic
 ```
 
 </TabItem>
@@ -139,7 +139,7 @@ It lives in this repository: [gazebo_bluerov2](https://github.com/blksail-edu/ga
 Clone the repository into your workspace:
 
 ```bash
-git clone https://github.com/blksail-edu/gazebo_bluerov2
+cd && git clone https://github.com/blksail-edu/gazebo_bluerov2
 ```
 
 Build the simulation:
