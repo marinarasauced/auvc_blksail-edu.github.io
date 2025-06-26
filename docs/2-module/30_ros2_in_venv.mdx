@@ -42,7 +42,7 @@ Compiling ROS 2 executables for virtual environments requires that all nodes in 
 
 :::
 
-4. Within your package, create a new python file called `virtualenvs.py`. 
+4. Within your package, create a new python file called `virtualenvs.py`.
 
 This file will contain a node that imports numpy from the virtual environment. The node will utilize numpy to perform a quick calculation that is logged to the terminal, and then the node will shutdown.
 
@@ -67,7 +67,7 @@ class VirtualEnvironmentsTutorial(Node):
         self.theta = self.get_parameter("theta").value
         self.get_logger().info(sys.executable)
 
-    
+
     def run(self):
         """
         This method logs the sin of the theta parameter using the numpy library to the terminal.
@@ -107,7 +107,7 @@ entry_points={
     ],
 },
 ```
-{/* 
+{/*
 ### Update setup.cfg
 
 6. Ensure the new virtual environment is activated and find the its path with `which python`. The name of the virtual environment will be on the left of the terminal line if it is activated. If it is not activated, first run `workon tutorials`.

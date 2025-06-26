@@ -7,6 +7,8 @@ import TabItem from "@theme/TabItem";
 
 # 2.1 Introduction
 
+Robot Operating System 2 (ROS 2) is a middleware with open-source libraries and tools to build and support robotics applications. The documentation can be found [here](https://docs.ros.org/en/jazzy/index.html).
+
 <iframe
   src="https://blksail-edu.github.io/slides/2024_intro_to_ros"
   width="100%"
@@ -15,7 +17,6 @@ import TabItem from "@theme/TabItem";
   allowfullscreen
 ></iframe>
 
-Robot Operating System 2 (ROS 2) is a middleware with open-source libraries and tools to build and support robotics applications. The documentation can be found [here](https://docs.ros.org/en/jazzy/index.html).
 
 ## Terminology
 
@@ -41,7 +42,7 @@ Nodes are instances of executables that act as individual computation entitites.
 
 ### Topics
 
-Topics are named buses that nodes use to exchange messages in publisher/subscriber pairs. Nodes talk to other nodes by publishing messages to topics. Nodes listen to other nodes by subscribing to those topics to receive the messages. 
+Topics are named buses that nodes use to exchange messages in publisher/subscriber pairs. Nodes talk to other nodes by publishing messages to topics. Nodes listen to other nodes by subscribing to those topics to receive the messages.
 
 *Each topic is limited to a single message type specified at the time when the topic is named. Multiple topics can have the same message type.*
 
@@ -82,7 +83,7 @@ Parmaeters are modifiable values assigned to individual or multiple nodes at run
 
 ## Environment Setup
 
-### Source ROS 2 in .zshrc File
+### Source ROS 2 in `.zshrc` File
 
 For ROS 2 to be accessible in the terminal, the ROS 2 installation and all workspaces must be sourced. The installation contains all default packages and tools necessary to use ROS 2. Workspaces are locations that contain user-defined packages/code.
 
