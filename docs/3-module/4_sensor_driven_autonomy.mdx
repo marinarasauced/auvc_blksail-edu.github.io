@@ -307,11 +307,13 @@ You can test that this works by pinging your Raspberry Pi. In a `WSL` terminal, 
 ping 192.168.2.2
 ```
 
-Then, create two additional Windows Firewall protocols to allow access to the Gazebo ports:
+Then, create four additional Windows Firewall protocols to allow access to the Gazebo ports:
 
 ```zsh
-New-NetFirewallRule -DisplayName "AUVC Allow Gazebo Ports 11345-11346 Inbound for WSL2" -Direction Inbound -Protocol UDP -LocalPort 11345-11346 -Action Allow
-New-NetFirewallRule -DisplayName "AUVC Allow Gazebo Ports 11345-11346 Outbound for WSL2" -Direction Outbound -Protocol UDP -RemotePort 11345-11346 -Action Allow
+New-NetFirewallRule -DisplayName "AUVC Allow Gazebo UDP Ports Inbound for WSL2" -Direction Inbound -Protocol UDP -LocalPort 9000-9100,10317-10318,11345-11355 -Action Allow
+New-NetFirewallRule -DisplayName "AUVC Allow Gazebo UDP Ports Outbound for WSL2" -Direction Outbound -Protocol UDP -RemotePort 9000-9100,10317-10318,11345-11355 -Action Allow
+New-NetFirewallRule -DisplayName "AUVC Allow Gazebo TCP Ports Inbound for WSL2" -Direction Inbound -Protocol TCP -LocalPort 44000-47000 -Action Allow
+New-NetFirewallRule -DisplayName "AUVC Allow Gazebo TCP Ports Outbound for WSL2" -Direction Outbound -Protocol TCP -RemotePort 44000-47000 -Action Allow
 ```
 
 You can test that this is working by running the Gazebo simulation in a `WSL` terminal, and running the following command from your Raspberry Pi:
