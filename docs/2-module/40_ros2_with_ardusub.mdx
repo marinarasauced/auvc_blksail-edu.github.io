@@ -134,10 +134,10 @@ colcon build --packages-select rosmav && source install/setup.zsh
 
 ## Launching ROSMAV
 
-After building the `rosmav` package, test the interface by running the following command in a terminal on the backseat:
+After building the `rosmav` package, test the interface by running the following command in a terminal on the `backseat`:
 
 ```zsh
-ros2 run rosmav ros_bluerov2_interface
+ros2 launch rosmav bluerov2_launch.yaml
 ```
 
 If the command runs successfully, you should see the following output:
